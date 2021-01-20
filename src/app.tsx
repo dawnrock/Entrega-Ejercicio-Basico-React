@@ -24,10 +24,13 @@ export const App = () => {
     return (
       <> 
         <div>
-        <input value={filter} onChange={(e) => setFilter(e.target.value)}/>
-          </div>       
+
+          <input value={filter} onChange={(e) => setFilter(e.target.value)}/>
+
+        </div>    
+
         <table>
-          
+  
           <thead>
             <tr>
               <th>Avatar</th>
@@ -37,14 +40,15 @@ export const App = () => {
               <th>Type</th>
               <th>Gender</th>
             </tr>
+
           </thead>
+          
           <tbody>
-            
+
             {characters.map((character) => (
                 <CharacterTableRow key={character.name} character={character} />
             ))}
-           
-            
+
           </tbody>
         </table>
       </>
